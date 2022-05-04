@@ -11,12 +11,13 @@ from Subtracao import *
 from Multiplicacao import *
 
 if __name__ == '__main__':
-    exp = Multiplicacao(Num(1), Var('x'))
+    exp = Soma(Num(1), Var('x'))
     s = Estado()
-    s.adicionar('x', 1)
-    exp = small_step(exp, s)
+    s.adicionar('y', 3)
+    s.adicionar('x', 5)
     print(exp.toString())
     print(s.toString())
+    exp = small_step(exp, s)
     while not isinstance(exp, Num):
         print(exp.toString())
         print(s.toString())

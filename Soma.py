@@ -8,7 +8,7 @@ class Soma(Exp):
         self.expDir = d
 
     def toString(self):
-        return str(self.expEsq.valor) + " + " + str(self.expDir.valor)
+        return self.expEsq.toString() + " + " + self.expDir.toString()
 
     def transicao(self, s):
         if not isinstance(self.expEsq, Num):
