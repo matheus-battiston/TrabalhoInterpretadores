@@ -9,11 +9,11 @@ class Atribuicao(Comando):
         self.expressao = expressao
 
     def toString(self):
-        return self.variavel + ' :=  ' + self.expressao
+        return self.variavel.toString() + ' :=  ' + self.expressao.toString()
 
     def transicao(self, s):
         if isinstance(self.expressao, Num):
-            s.atualizar(self.variavel.nome, Num(self.expressao))
+            s.atualizar(self.variavel.nome, self.expressao.valor)
             return Skip()
         else:
             exp = self.expressao.transicao(s)

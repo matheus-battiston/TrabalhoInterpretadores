@@ -9,7 +9,6 @@ class Sequencial(Exp):
         self.expEsq = a.pop(0)
         self.expDir = a
 
-
     def transicao(self, s):
         if isinstance(self.expEsq, Soma):
             self.expDir.insert(0, self.expEsq.transicao(s))

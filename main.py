@@ -10,16 +10,23 @@ from Var import *
 from Subtracao import *
 from Multiplicacao import *
 from Sequencial import *
+from Menor import *
+from Maior import *
+from Igual import *
+from Or import *
+from And import *
+from Negacao import *
+from Any import *
 
 if __name__ == '__main__':
-    exp = Sequencial([Soma(Num(1), Var('x')), Soma(Num(1), Var('y'))])
+    exp = Any(Var('x'))
     s = Estado()
     s.adicionar('y', 3)
-    s.adicionar('x', 5)
+    s.adicionar('x', 0)
     print(exp.toString())
     print(s.toString())
     exp = small_step(exp, s)
-    while not isinstance(exp, Num) and not isinstance(exp, Skip):
+    while not isinstance(exp, Num) and not isinstance(exp, Skip) and not isinstance(exp, Bool):
         print(exp.toString())
         print(s.toString())
         exp = small_step(exp, s)

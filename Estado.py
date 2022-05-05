@@ -6,7 +6,7 @@ class Estado:
         self.mapeamento[variavel] = valor
 
     def atualizar(self, variavel, valor):
-        self.mapeamento.update(variavel, valor)
+        self.mapeamento[variavel] = valor
 
     def ler(self, variavel):
         inteiro = self.mapeamento[variavel]
