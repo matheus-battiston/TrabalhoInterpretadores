@@ -17,9 +17,10 @@ from Or import *
 from And import *
 from Negacao import *
 from Any import *
+from Condicional import *
 
 if __name__ == '__main__':
-    exp = Any(Var('x'))
+    exp = Condicional(Bool(False), Atribuicao(Var("x"), Num(10)), Atribuicao(Var("x"), Num(50)))
     s = Estado()
     s.adicionar('y', 3)
     s.adicionar('x', 0)
