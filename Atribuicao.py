@@ -1,6 +1,5 @@
 from Comando import *
 from Num import *
-from Estado import *
 from Skip import *
 
 class Atribuicao(Comando):

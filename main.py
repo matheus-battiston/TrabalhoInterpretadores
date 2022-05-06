@@ -18,16 +18,18 @@ from And import *
 from Negacao import *
 from Any import *
 from Condicional import *
+from While import *
+from DoWhile import *
 
 if __name__ == '__main__':
-    exp = Condicional(Bool(False), Atribuicao(Var("x"), Num(10)), Atribuicao(Var("x"), Num(50)))
+    exp = DoWhile(Atribuicao(Var('x'), Soma(Var('x'), Num(1))), Menor(Var('x'), Num(2)))
     s = Estado()
     s.adicionar('y', 3)
     s.adicionar('x', 0)
     print(exp.toString())
     print(s.toString())
     exp = small_step(exp, s)
-    while not isinstance(exp, Num) and not isinstance(exp, Skip) and not isinstance(exp, Bool):
+    while exp.toString() != 'skip' and not isinstance(exp, Num) and not isinstance(exp, Bool):
         print(exp.toString())
         print(s.toString())
         exp = small_step(exp, s)

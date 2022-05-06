@@ -3,7 +3,7 @@ from Exp import *
 from Skip import *
 from Soma import *
 from Bool import *
-
+from Sequencial import *
 
 class Condicional(Exp):
     def __init__(self, a, b, c):
@@ -14,11 +14,11 @@ class Condicional(Exp):
     def transicao(self, s):
         if isinstance(self.cond, Bool):
             if self.cond.valor:
-                return self.entao.transicao(s)
+                return Sequencial([self.entao])
             else:
-                return self.senao.transicao(s)
+                return Sequencial([self.senao])
         else:
             return Condicional(self.cond.transicao(s), self.entao, self.senao)
 
     def toString(self):
-        return "if " + self.cond.toString() + " than ", self.entao.toString() + "; else " + self.senao.toString()
+        return "if " + self.cond.toString() + " than " + self.entao.toString() + "; else " + self.senao.toString()

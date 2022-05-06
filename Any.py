@@ -1,5 +1,3 @@
-from Bool import *
-from Exp import *
 from Var import *
 import random
 from Atribuicao import *
