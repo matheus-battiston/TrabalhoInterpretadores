@@ -20,6 +20,7 @@ from Any import *
 from Condicional import *
 from While import *
 from DoWhile import *
+from IfNoElse import *
 
 if __name__ == '__main__':
     exp = DoWhile(Atribuicao(Var('x'), Soma(Var('x'), Num(1))), Menor(Var('x'), Num(2)))

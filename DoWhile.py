@@ -13,7 +13,10 @@ class DoWhile(Exp):
         self.cond = c
 
     def transicao(self, s):
-        return Sequencial([self.comando, Condicional(self.cond, Sequencial([self]), Skip())])
+        if not isinstance(self.cond, Skip):
+            return Sequencial([self.comando, Condicional(self.cond, Sequencial([self]), Skip())])
+        else:
+            return Skip()
 
     def toString(self):
         return "Do " + self.comando.toString() + " While " + self.cond.toString()
