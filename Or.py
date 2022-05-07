@@ -1,5 +1,4 @@
 from Bool import *
-from Num import *
 from Exp import *
 
 

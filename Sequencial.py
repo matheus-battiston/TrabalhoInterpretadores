@@ -1,5 +1,3 @@
-from Num import *
-from Exp import *
 from Skip import *
 from Soma import *
 

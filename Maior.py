@@ -1,6 +1,6 @@
 from Bool import *
-from Num import *
 from Exp import *
+from Num import *
 
 
 class Maior(Exp):

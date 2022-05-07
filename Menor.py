@@ -1,5 +1,5 @@
-from Num import *
 from Bool import *
+from Num import *
 
 
 class Menor(Exp):

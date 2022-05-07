@@ -1,5 +1,5 @@
-from Num import *
 from Exp import *
+from Num import *
 
 
 class Subtracao(Exp):
