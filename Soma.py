@@ -1,4 +1,3 @@
-from Exp import *
 from Num import *
 
 

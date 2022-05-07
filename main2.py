@@ -4,12 +4,12 @@ from Estado import *
 from IfNoElse import *
 from Interpretador import *
 from Menor import *
+from Inc import *
 
 if __name__ == '__main__':
-    exp = DoWhile(Atribuicao(Var('x'), Soma(Var('x'), Num(1))), Menor(Var('x'), Num(2)))
+    exp = Inc(Var('x'))
     s = Estado()
-    s.adicionar('y', 3)
-    s.adicionar('x', 0)
+    s.adicionar('x', 1)
     print(exp.toString())
     print(s.toString())
     exp = small_step(exp, s)

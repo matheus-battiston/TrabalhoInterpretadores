@@ -5,5 +5,3 @@ class Comando:
     @abstractmethod
     def transicao(self, s):
         pass
-
-

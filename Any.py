@@ -9,8 +9,8 @@ class Any(Exp):
         self.var = b
 
     def toString(self):
-        return str("Any (" + self.var.toString()) + ")"
+        return str("Any " + self.var.toString())
 
     def transicao(self, s):
         if isinstance(self.var, Var):
-            return Atribuicao(self.var, Num(random.randint(0,1000)))
+            return Atribuicao(self.var, Num(random.randint(0, 1000)))

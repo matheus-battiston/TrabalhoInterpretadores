@@ -19,7 +19,7 @@ class Estado:
         s = '['
         for aux, x in enumerate(self.mapeamento):
             s = s + x + ' -> ' + str(self.mapeamento[x])
-            if aux < len(self.mapeamento)-1:
+            if aux < len(self.mapeamento) - 1:
                 s += ', '
 
         s += ']'

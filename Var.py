@@ -1,5 +1,6 @@
 from Num import *
 
+
 class Var(Exp):
     def __init__(self, nome):
         self.nome = nome

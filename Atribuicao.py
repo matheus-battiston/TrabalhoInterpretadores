@@ -2,6 +2,7 @@ from Comando import *
 from Num import *
 from Skip import *
 
+
 class Atribuicao(Comando):
     def __init__(self, variavel, expressao):
         self.variavel = variavel

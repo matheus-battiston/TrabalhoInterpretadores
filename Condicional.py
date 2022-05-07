@@ -1,6 +1,7 @@
 from Bool import *
 from Sequencial import *
 
+
 class Condicional(Exp):
     def __init__(self, a, b, c):
         self.cond = a
