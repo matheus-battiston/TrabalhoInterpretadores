@@ -4,10 +4,9 @@ from Estado import *
 from IfNoElse import *
 from Interpretador import *
 from Menor import *
-from Multiplicacao import *
 
 if __name__ == '__main__':
-    exp = Multiplicacao(Var('y'), Num(10))
+    exp = DoWhile(Atribuicao(Var('x'), Soma(Var('x'), Num(1))), Menor(Var('x'), Num(2)))
     s = Estado()
     s.adicionar('y', 3)
     s.adicionar('x', 0)
