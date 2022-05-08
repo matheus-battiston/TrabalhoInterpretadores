@@ -4,13 +4,15 @@ from Estado import *
 from IfNoElse import *
 from Interpretador import *
 from Menor import *
-from Multiplicacao import *
+from DoWhile import *
+from Inc import *
+from Subtracao import *
 
 if __name__ == '__main__':
-    exp = Multiplicacao(Var('y'), Num(10))
+    exp = DoWhile(Inc(Var('x')), Menor(Var('x'), Subtracao(Var('y'), Num(5))))
     s = Estado()
-    s.adicionar('y', 3)
-    s.adicionar('x', 0)
+    s.adicionar('y', 10)
+    s.adicionar('x', 1)
     print(exp.toString())
     print(s.toString())
     exp = small_step(exp, s)

@@ -4,13 +4,16 @@ from Estado import *
 from IfNoElse import *
 from Interpretador import *
 from Menor import *
-from Multiplicacao import *
+from Or import *
+from Igual import *
+from Maior import *
+
 
 if __name__ == '__main__':
-    exp = Multiplicacao(Var('y'), Num(10))
+    exp = Sequencial([IfNoElse(Or(Igual(Var('x'), Num(4)), Maior(Var('y'), Num(10))), Atribuicao(Var('y'), Num(5))), Any(Var('x'))])
     s = Estado()
-    s.adicionar('y', 3)
-    s.adicionar('x', 0)
+    s.adicionar('y', 0)
+    s.adicionar('x', 1)
     print(exp.toString())
     print(s.toString())
     exp = small_step(exp, s)

@@ -7,7 +7,7 @@ class Subtracao(Exp):
         self.expDir = d
 
     def toString(self):
-        return str(self.expEsq.valor) + " - " + str(self.expDir.valor)
+        return str(self.expEsq.toString()) + " - " + str(self.expDir.toString())
 
     def transicao(self, s):
         if not isinstance(self.expEsq, Num):
